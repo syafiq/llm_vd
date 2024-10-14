@@ -51,7 +51,7 @@ For detailed results and analysis, please refer to our paper.
 Contributions are welcome! Please open an issue or submit a pull request.
 
 ## License
-This project is licensed under the MIT License.
+This project is licensed under the Apache-2.0 license.
 
 ## Acknowledgments
 We would like to thank the contributors to the CVEfixes dataset and the developers of the DeepSeek-Coder models.
