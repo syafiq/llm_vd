@@ -22,7 +22,7 @@ Example
 jupyter notebook RQ1/data_processing/js-dataproc.ipynb
 ```
 
-##Fine-tuning the Models
+## Fine-tuning the Models
 Fine-tune the models using the script in RQ1/finetuning/.
 
 Example:
