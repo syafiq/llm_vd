@@ -25,17 +25,13 @@ from transformers import (
     get_scheduler,
 )
 
-datadir  ="js_all"
-shortname="js_all"
+datadir  ="js" # change accordingly
+shortname="js" # change accordingly
 
-#model_checkpoint = "deepseek-ai/DeepSeek-Coder-V2-Lite-Base"
-#model_checkpoint = "deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct"
 model_checkpoint = "deepseek-ai/deepseek-coder-1.3b-instruct"
 
-train_df = pd.read_json(f"{datadir}/js_date_train.json")
-val_df = pd.read_json(f"{datadir}/js_date_test.json")
-#train_df = train_df.drop(columns=['index', 'committer_date'])
-#val_df = val_df.drop(columns=['index', 'committer_date'])
+train_df = pd.read_json(f"{datadir}/js_date_train.json") # change accordingly
+val_df = pd.read_json(f"{datadir}/js_date_test.json") # change accordingly
 train_df = train_df.reset_index(drop=True)
 val_df = val_df.reset_index(drop=True)
 
