@@ -45,6 +45,15 @@ Or, if the GPUs are accessible through slurm, one can use the script:
 sbatch RQ1/finetuning/finetune.sh
 ```
 
+### Measurement on MegaVul (Java)
+To replicate the measurement on MegaVul for Java, use the following script:
+
+```bash
+python RQ1/test_on_megavul/megavul.py
+```
+
+The dataset can be downloaded from [this github repo](https://github.com/Icyrockton/MegaVul). Note that the script only consumes the code snippets (named as column `text`) and the respective label (named as column `label`).
+
 ## RQ2
 ### Code Complexity Analysis
 Analyze the dependency between code complexity and detection performance using RQ2/measure.py.
