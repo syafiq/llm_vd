@@ -24,7 +24,7 @@ Example
 python RQ1/data_processing/getdata.py {lang}
 ```
 
-where `{lang}` can be `[JavaScript, PHP, C, Java, Python, Go, C++]` (case sensitive). This produces 3 sets: `{lang}_date_[train,valid,test].json`, where `train` is used for training, `valid` is used for development, and `test` is used for the measurement that is shown in the paper. To get both C and C++ at the same, one can modify the query a bit to something like:
+where `{lang}` can be `[JavaScript, PHP, C, Java, Python, Go, C++]` (case sensitive). This produces 3 sets: `{lang}_date_[train,valid,test].json`, where `train` is used for training, `valid` is used for development, and `test` is used for the measurement that is shown in the paper. To get both C and C++ at the same time, one can modify the query a bit to something like:
 
 ```python
 query = """
