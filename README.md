@@ -17,29 +17,24 @@ Models: Download the finetuned models from [Google Drive](https://drive.google.c
 
 ## RQ1
 ### Data Processing
-To replicate the data processing for each programming language, run the provided Jupyter notebooks in the RQ1/data_processing/ directory. Each programming language has its own notebook, named according to the language it processes.
-
-To execute the notebooks, you can run the following commands:
+To replicate the data processing for each programming language, run `getdata.py` from `RQ1/data_processing/` directory.
 
 Example
 ```bash
-jupyter notebook RQ1/data_processing/js-dataproc.ipynb
-jupyter notebook RQ1/data_processing/go-dataproc.ipynb
-jupyter notebook RQ1/data_processing/python-dataproc.ipynb
-jupyter notebook RQ1/data_processing/java-dataproc.ipynb
-jupyter notebook RQ1/data_processing/php-dataproc.ipynb
-jupyter notebook RQ1/data_processing/c_cpp-dataproc.ipynb
+python RQ1/data_processing/getdata.py {lang}
 ```
 
+where `{lang}` can be `[JavaScript, PHP, C, Java, Python, Go, C++]` (case sensitive). This produces 3 sets: `{lang}_date_[train,valid,test].json`, where `train` is used for training, `valid` is used for development, and `test` is used for the measurement that is shown in the paper. 
+
 ### Fine-tuning the Models
-To replicate the finetuning process of our created models, use the following script in RQ1/finetuning/:
+To replicate the finetuning process of our created models, use the following script in `RQ1/finetuning/`:
 
 Example:
 ```bash
 python RQ1/finetuning/finetune.py
 ```
 
-Or, if the GPUs are accessible through slurm, one can use the script:
+Or, if the GPUs are accessible through [slurm](https://slurm.schedmd.com/slurm.html), one can use the script:
 
 ```bash
 sbatch RQ1/finetuning/finetune.sh
@@ -52,7 +47,7 @@ To replicate the measurement on MegaVul for Java, use the following script:
 python RQ1/test_on_megavul/megavul.py
 ```
 
-The dataset can be downloaded from [this github repo](https://github.com/Icyrockton/MegaVul). Note that the script only consumes the code snippets (named as column `text`) and the respective label (named as column `label`).
+The dataset can be downloaded from [this GitHub repo](https://github.com/Icyrockton/MegaVul). Note that the script only consumes the code snippets (named as column `text`) and the respective label (named as column `label`).
 
 ## RQ2
 ### Code Complexity Analysis
@@ -63,7 +58,7 @@ Example:
 python RQ2/measure.py {lang}
 ```
 
-where lang is `[js, python, java, php, go, c_cpp]`. For each measurement, the output will be the mean value of the following metrics: `[h_volume, h_difficulty, h_effort, cyclomatic_complexity, nloc]` that can be used to perform the analysis in RQ2. Note that each measurement requires the dataset (train and test) for each language that can be taken from the previous step or directly from our google drive mentioned above.  
+where lang is `[js, python, java, php, go, c_cpp]`. For each measurement, the output will be the mean value of the following metrics: `[h_volume, h_difficulty, h_effort, cyclomatic_complexity, nloc]` that can be used to perform the analysis in RQ2. Note that each measurement requires the dataset (`train` and `test`) for each language, which can be taken from the previous step or directly from our Google Drive mentioned above.  
 
 ## Results
 Our findings indicate significant variations in detection performance across different programming languages when using fine-tuned LLMs:
