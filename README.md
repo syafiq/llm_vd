@@ -17,7 +17,7 @@ Models: Download the finetuned models from [Google Drive](https://drive.google.c
 
 ## RQ1
 ### Data Processing
-To replicate the data processing for each programming language, run `getdata.py` from `RQ1/data_processing/` directory.
+To replicate the data processing of [CVEFixes](https://github.com/secureIT-project/CVEfixes) for each programming language, run `getdata.py` from `RQ1/data_processing/` directory.
 
 Example
 ```bash
