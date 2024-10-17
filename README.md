@@ -12,25 +12,41 @@ Due to size constraints, the dataset and models are provided separately.
 
 Dataset: Download the dataset from [Google Drive](https://drive.google.com/drive/folders/1gef7O2592a5BEdjX_yPz78HTN7-p_Zmo?usp=sharing). 
 
-Models: Download the fine-tuned models from [Google Drive](https://drive.google.com/drive/folders/1RhyW2CkIvLzsDmIfdmBmYNFhxNQansOv?usp=sharing). 
+Models: Download the finetuned models from [Google Drive](https://drive.google.com/drive/folders/1RhyW2CkIvLzsDmIfdmBmYNFhxNQansOv?usp=sharing). 
 
-## Data Processing
-Process the data for each programming language using the provided Jupyter notebooks in RQ1/data_processing/.
+
+## RQ1
+### Data Processing
+To replicate the data processing for each programming language, run the provided Jupyter notebooks in the RQ1/data_processing/ directory. Each programming language has its own notebook, named according to the language it processes.
+
+To execute the notebooks, you can run the following commands:
 
 Example
 ```bash
 jupyter notebook RQ1/data_processing/js-dataproc.ipynb
+jupyter notebook RQ1/data_processing/go-dataproc.ipynb
+jupyter notebook RQ1/data_processing/python-dataproc.ipynb
+jupyter notebook RQ1/data_processing/java-dataproc.ipynb
+jupyter notebook RQ1/data_processing/php-dataproc.ipynb
+jupyter notebook RQ1/data_processing/c_cpp-dataproc.ipynb
 ```
 
-## Fine-tuning the Models
-Fine-tune the models using the script in RQ1/finetuning/.
+### Fine-tuning the Models
+To replicate the finetuning process of our created models, use the following script in RQ1/finetuning/:
 
 Example:
 ```bash
-python RQ1/finetuning/finetune.py --config RQ1/finetuning/default_config.yaml
+python RQ1/finetuning/finetune.py
 ```
 
-## Code Complexity Analysis
+Or, if the GPUs are accessible through slurm, one can use the script:
+
+```bash
+sbatch RQ1/finetuning/finetune.sh
+```
+
+## RQ2
+### Code Complexity Analysis
 Analyze the dependency between code complexity and detection performance using RQ2/measure.py.
 
 Example:
