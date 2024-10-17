@@ -24,7 +24,19 @@ Example
 python RQ1/data_processing/getdata.py {lang}
 ```
 
-where `{lang}` can be `[JavaScript, PHP, C, Java, Python, Go, C++]` (case sensitive). This produces 3 sets: `{lang}_date_[train,valid,test].json`, where `train` is used for training, `valid` is used for development, and `test` is used for the measurement that is shown in the paper. 
+where `{lang}` can be `[JavaScript, PHP, C, Java, Python, Go, C++]` (case sensitive). This produces 3 sets: `{lang}_date_[train,valid,test].json`, where `train` is used for training, `valid` is used for development, and `test` is used for the measurement that is shown in the paper. To get both C and C++ at the same, one can modify the query a bit to something like:
+
+```python
+query = """
+       SELECT m.code, m.before_change, c.committer_date
+       FROM file_change f, method_change m, commits c
+       WHERE m.file_change_id = f.file_change_id
+       AND c.hash = f.hash
+       AND f.programming_language IN ('C', 'C++')
+       """
+```
+
+Another possible approach is to process them separately and then join the dataset by merging two dataframes, for instance. 
 
 ### Fine-tuning the Models
 To replicate the finetuning process of our created models, use the following script in `RQ1/finetuning/`:
