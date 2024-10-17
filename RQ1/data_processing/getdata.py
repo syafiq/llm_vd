@@ -32,6 +32,9 @@ query = """
 
 df = pd.read_sql_query(query, conn, params=[lang])
 
+if lang == "JavaScript":
+    df = df.head(100000)
+    
 df = df.drop_duplicates(subset=['code'], ignore_index=True)
 df = df.rename(columns={'before_change': 'label', 'code': 'text'})
 df.loc[df.label == 'False', 'label'] = 0
