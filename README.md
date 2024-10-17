@@ -56,12 +56,14 @@ The dataset can be downloaded from [this github repo](https://github.com/Icyrock
 
 ## RQ2
 ### Code Complexity Analysis
-Analyze the dependency between code complexity and detection performance using RQ2/measure.py.
+To replicate the analysis of the dependency between code complexity and detection performance, use RQ2/measure.py.
 
 Example:
 ```bash
-python RQ2/measure.py
+python RQ2/measure.py {lang}
 ```
+
+where lang is `[js, python, java, php, go, c_cpp]`. For each measurement, the output will be the mean value of the following metrics: `[h_volume, h_difficulty, h_effort, cyclomatic_complexity, nloc]` that can be used to perform the analysis in RQ2. Note that each measurement requires the dataset (train and test) for each language that can be taken from the previous step or directly from our google drive mentioned above.  
 
 ## Results
 Our findings indicate significant variations in detection performance across different programming languages when using fine-tuned LLMs:
