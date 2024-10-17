@@ -19,8 +19,7 @@ parser.add_argument('lang', type=str, help='Programming language to filter on')
 args = parser.parse_args()
 lang = args.lang
 
-#cvefixes_loc = <somewhere>
-cvefixes_loc = "../../../kevin/CVEfixes.db"
+cvefixes_loc = <somewhere>
 conn = create_connection(cvefixes_loc)
 
 query = """
