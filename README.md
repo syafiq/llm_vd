@@ -68,7 +68,7 @@ Example:
 python RQ2/measure.py {lang}
 ```
 
-where lang is `[js, python, java, php, go, c_cpp]`. For each measurement, the output will be the mean value of the following metrics: `[h_volume, h_difficulty, h_effort, cyclomatic_complexity, nloc]` that can be used to perform the analysis in RQ2. Note that each measurement requires the dataset (`train` and `test`) for each language, which can be taken from the previous step or directly from our Google Drive mentioned above.  
+where lang is `[js, python, java, php, go, c_cpp]`. For each measurement, the output will be the mean value of the following metrics: `[h_volume, h_difficulty, h_effort, cyclomatic_complexity, nloc]` that can be used to perform the analysis. Note that each measurement requires the dataset (`train` and `test`) for each language, which can be taken from the previous step or directly from our Google Drive mentioned above.  
 
 ## Results
 Our findings indicate significant variations in detection performance across different programming languages when using fine-tuned LLMs:
