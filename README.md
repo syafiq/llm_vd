@@ -71,10 +71,10 @@ python RQ2/measure.py {lang}
 where lang is `[js, python, java, php, go, c_cpp]`. For each measurement, the output will be the mean value of the following metrics: `[h_volume, h_difficulty, h_effort, cyclomatic_complexity, nloc]` that can be used to perform the analysis. Note that each measurement requires the dataset (`train` and `test`) for each language, which can be taken from the previous step or directly from our Google Drive mentioned above.  
 
 ## Results
-Our findings indicate significant variations in detection performance across different programming languages when using fine-tuned LLMs:
+Our findings indicate significant variations in detection performance across different programming languages when using fine-tuned LMs:
 
-JavaScript demonstrated higher vulnerability detection performance, achieving better F1 scores and lower Vulnerability Detection Scores (VD-S).
-C/C++ showed lower performance, with significantly lower F1 scores and higher VD-S values.
+JavaScript demonstrated higher vulnerability detection performance, achieving better F1 scores.
+C/C++ showed lower performance, with significantly lower F1 scores.
 We did not find a strong correlation between code complexity and the detection capabilities of LLMs. The correlation coefficients were weak and not statistically significant, suggesting that code complexity, as measured by metrics like Cyclomatic Complexity and Halstead Effort, may not be a determining factor in the effectiveness of LLM-based vulnerability detection.
 
 For detailed results and analysis, please refer to our paper.
