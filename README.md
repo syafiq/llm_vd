@@ -59,7 +59,7 @@ python RQ1/test_on_megavul/megavul.py
 
 The dataset can be downloaded from [this GitHub repo](https://github.com/Icyrockton/MegaVul). Note that the script only consumes the code snippets (named as column `text`) and the respective label (named as column `label`).
 
-## Correlation between performance and complexity
+## Correlation between performance (F1) and complexity
 ### Code Complexity Analysis
 To replicate the analysis of the dependency between code complexity and detection performance, use RQ2/measure.py.
 
