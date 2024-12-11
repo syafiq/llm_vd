@@ -1,10 +1,8 @@
 ## Description
 This repository contains the code, data, and models used in our study on the effectiveness of Large Language Models (LLMs) for vulnerability detection across multiple programming languages. We focus on JavaScript, Java, Python, PHP, Go, and C/C++, leveraging the CVEfixes dataset to create language-specific subsets. We fine-tune and evaluate state-of-the-art LLMs on these subsets to assess their performance in detecting vulnerabilities across different languages.
 
-Our research addresses the following questions:
-
-- RQ1: How does the detection performance vary for different programming languages when using state-of-the-art LLMs on code from the same curated dataset?
-- RQ2: Is there any dependency between code complexity and the detection performances using LLM?
+- We clean and adapt the large CVEFixes dataset to perform an empirical study on the vulnerability detection performance differences between JavaScript, Java, Python, PHP, Go, and C/C++.
+- We analyze and present correlation figures for the relationship between code complexity and vulnerability detection performance in the investigated dataset.
 
 ## Downloading the Dataset and Models
 
@@ -15,7 +13,7 @@ Datasets: Download the dataset from [Google Drive](https://drive.google.com/driv
 Models: Download the finetuned models from [Google Drive](https://drive.google.com/drive/folders/1RhyW2CkIvLzsDmIfdmBmYNFhxNQansOv?usp=sharing). 
 
 
-## RQ1
+## Performance 
 ### Data Processing
 To replicate the data processing of [CVEFixes](https://github.com/secureIT-project/CVEfixes) for each programming language, run `getdata.py` from `RQ1/data_processing/` directory.
 
@@ -61,7 +59,7 @@ python RQ1/test_on_megavul/megavul.py
 
 The dataset can be downloaded from [this GitHub repo](https://github.com/Icyrockton/MegaVul). Note that the script only consumes the code snippets (named as column `text`) and the respective label (named as column `label`).
 
-## RQ2
+## Correlation between performance and complexity
 ### Code Complexity Analysis
 To replicate the analysis of the dependency between code complexity and detection performance, use RQ2/measure.py.
 
