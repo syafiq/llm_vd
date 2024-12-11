@@ -1,5 +1,5 @@
 ## Description
-This repository contains the code, data, and models used in our study on the effectiveness of Large Language Models (LLMs) for vulnerability detection across multiple programming languages. We focus on JavaScript, Java, Python, PHP, Go, and C/C++, leveraging the CVEfixes dataset to create language-specific subsets. We fine-tune and evaluate state-of-the-art LLMs on these subsets to assess their performance in detecting vulnerabilities across different languages.
+This repository contains the code, data, and models used in our study on the effectiveness of Language Models (LMs) for vulnerability detection across multiple programming languages. We focus on JavaScript, Java, Python, PHP, Go, and C/C++, leveraging the CVEfixes dataset to create language-specific subsets. We fine-tune and evaluate state-of-the-art LLMs on these subsets to assess their performance in detecting vulnerabilities across different languages.
 
 - We clean and adapt the large CVEFixes dataset to perform an empirical study on the vulnerability detection performance differences between JavaScript, Java, Python, PHP, Go, and C/C++.
 - We analyze and present correlation figures for the relationship between code complexity and vulnerability detection performance in the investigated dataset.
