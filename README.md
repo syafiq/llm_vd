@@ -1,5 +1,5 @@
 ## Description
-This repository contains the code, data, and models used in our study on the effectiveness of Language Models (LMs) for vulnerability detection across multiple programming languages. We focus on JavaScript, Java, Python, PHP, Go, and C/C++, leveraging the CVEfixes dataset to create language-specific subsets. We fine-tune and evaluate state-of-the-art LLMs on these subsets to assess their performance in detecting vulnerabilities across different languages.
+This repository contains the code, data, and models used in our study on the effectiveness of Language Models (LMs) for vulnerability detection across multiple programming languages. We focus on JavaScript, Java, Python, PHP, Go, and C/C++, leveraging the CVEfixes dataset to create language-specific subsets. We fine-tune and evaluate state-of-the-art LMs on these subsets to assess their performance in detecting vulnerabilities across different languages.
 
 - We clean and adapt the large CVEFixes dataset to perform an empirical study on the vulnerability detection performance differences between JavaScript, Java, Python, PHP, Go, and C/C++.
 - We analyze and present correlation figures for the relationship between code complexity and vulnerability detection performance in the investigated dataset.
@@ -75,7 +75,7 @@ Our findings indicate significant variations in detection performance across dif
 
 JavaScript demonstrated higher vulnerability detection performance, achieving better F1 scores.
 C/C++ showed lower performance, with significantly lower F1 scores.
-We did not find a strong correlation between code complexity and the detection capabilities of LLMs. The correlation coefficients were weak and not statistically significant, suggesting that code complexity, as measured by metrics like Cyclomatic Complexity and Halstead Effort, may not be a determining factor in the effectiveness of LLM-based vulnerability detection.
+We did not find a strong correlation between code complexity and the detection capabilities of LMs. The correlation coefficients were weak and not statistically significant, suggesting that code complexity, as measured by metrics like Cyclomatic Complexity and Halstead Effort, may not be a determining factor in the effectiveness of LM-based vulnerability detection.
 
 For detailed results and analysis, please refer to our paper.
 
