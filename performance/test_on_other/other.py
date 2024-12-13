@@ -9,7 +9,7 @@ import sys
 
 model="java"
 
-c_test = pd.read_json(f"megavul_all.json")
+c_test = pd.read_json(f"other_dataset.json")
 c_test = c_test.reset_index(drop=True)
 test_dataset = Dataset.from_pandas(c_test)
 
