@@ -50,14 +50,14 @@ Or, if the GPUs are accessible through [slurm](https://slurm.schedmd.com/slurm.h
 sbatch RQ1/finetuning/finetune.sh
 ```
 
-### Measurement on MegaVul (Java)
-To replicate the measurement on MegaVul for Java, use the following script:
+### Measurement on Other Datasets
+To replicate the measurement on MegaVul, synth-vuln-fixes, and SARD use the following script:
 
 ```bash
-python RQ1/test_on_megavul/megavul.py
+python RQ1/test_on_other/_other.py
 ```
 
-The dataset can be downloaded from [this GitHub repo](https://github.com/Icyrockton/MegaVul). Note that the script only consumes the code snippets (named as column `text`) and the respective label (named as column `label`).
+The dataset can be downloaded from [MegaVul](https://github.com/Icyrockton/MegaVul),[synth-vuln-fixes](https://huggingface.co/datasets/patched-codes/synth-vuln-fixes),[SARD](https://samate.nist.gov/SARD/test-suites/103). Note that the script only consumes the code snippets (named as column `text`) and the respective label (named as column `label`).
 
 ## Correlation between performance (F1) and complexity
 ### Code Complexity Analysis
