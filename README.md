@@ -41,8 +41,10 @@ To replicate the finetuning process of our created models, use the following scr
 
 Example:
 ```bash
-python performance/finetuning/finetune.py
+python performance/finetuning/finetune.py <arg_1>...<arg_n>
 ```
+
+Please refer to the script for the complete arguments. 
 
 Or, if the GPUs are accessible through [slurm](https://slurm.schedmd.com/slurm.html), one can use the script:
 
