@@ -15,11 +15,11 @@ Models: Download the finetuned models from [Google Drive](https://drive.google.c
 
 ## Performance 
 ### Data Processing
-To replicate the data processing of [CVEFixes](https://github.com/secureIT-project/CVEfixes) for each programming language, run `getdata.py` from `RQ1/data_processing/` directory.
+To replicate the data processing of [CVEFixes](https://github.com/secureIT-project/CVEfixes) for each programming language, run `getdata.py` from `performance/data_processing/` directory.
 
 Example
 ```bash
-python RQ1/data_processing/getdata.py {lang}
+python performance/data_processing/getdata.py {lang}
 ```
 
 where `{lang}` can be `[JavaScript, PHP, C, Java, Python, Go, C++]` (case sensitive). This produces 3 sets: `{lang}_date_[train,valid,test].json`, where `train` is used for training, `valid` is used for development, and `test` is used for the measurement that is shown in the paper. To get both C and C++ at the same time, one can modify the query a bit to something like:
@@ -37,35 +37,35 @@ query = """
 Another possible approach is to process them separately and then join the dataset by merging two dataframes, for instance. 
 
 ### Fine-tuning the Models
-To replicate the finetuning process of our created models, use the following script in `RQ1/finetuning/`:
+To replicate the finetuning process of our created models, use the following script in `performance/finetuning/`:
 
 Example:
 ```bash
-python RQ1/finetuning/finetune.py
+python performance/finetuning/finetune.py
 ```
 
 Or, if the GPUs are accessible through [slurm](https://slurm.schedmd.com/slurm.html), one can use the script:
 
 ```bash
-sbatch RQ1/finetuning/finetune.sh
+sbatch performance/finetuning/finetune.sh
 ```
 
 ### Measurement on Other Datasets
 To replicate the measurement on MegaVul, synth-vuln-fixes, and SARD use the following script:
 
 ```bash
-python RQ1/test_on_other/other.py
+python performance/test_on_other/other.py
 ```
 
 The dataset can be downloaded from [MegaVul](https://github.com/Icyrockton/MegaVul), [synth-vuln-fixes](https://huggingface.co/datasets/patched-codes/synth-vuln-fixes), [SARD](https://samate.nist.gov/SARD/test-suites/103). Note that the script only consumes the code snippets (named as column `text`) and the respective label (named as column `label`).
 
 ## Correlation between performance (F1) and complexity
 ### Code Complexity Analysis
-To replicate the analysis of the dependency between code complexity and detection performance, use RQ2/measure.py.
+To replicate the analysis of the dependency between code complexity and detection performance, use correlation/measure.py.
 
 Example:
 ```bash
-python RQ2/measure.py {lang}
+python correlation/measure.py {lang}
 ```
 
 where lang is `[js, python, java, php, go, c_cpp]`. For each measurement, the output will be the mean value of the following metrics: `[h_volume, h_difficulty, h_effort, cyclomatic_complexity, nloc]` that can be used to perform the analysis. Note that each measurement requires the dataset (`train` and `test`) for each language, which can be taken from the previous step or directly from our Google Drive mentioned above.  
