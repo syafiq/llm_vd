@@ -28,7 +28,7 @@ from transformers import (
 datadir  ="js" # change accordingly
 shortname="js" # change accordingly
 
-model_checkpoint = "deepseek-ai/deepseek-coder-1.3b-instruct"
+model_checkpoint = "deepseek-ai/deepseek-coder-1.3b-instruct" # change accordingly
 
 train_df = pd.read_json(f"{datadir}/js_date_train.json") # change accordingly
 val_df = pd.read_json(f"{datadir}/js_date_test.json") # change accordingly
