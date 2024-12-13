@@ -54,7 +54,7 @@ sbatch RQ1/finetuning/finetune.sh
 To replicate the measurement on MegaVul, synth-vuln-fixes, and SARD use the following script:
 
 ```bash
-python RQ1/test_on_other/_other.py
+python RQ1/test_on_other/other.py
 ```
 
 The dataset can be downloaded from [MegaVul](https://github.com/Icyrockton/MegaVul), [synth-vuln-fixes](https://huggingface.co/datasets/patched-codes/synth-vuln-fixes), [SARD](https://samate.nist.gov/SARD/test-suites/103). Note that the script only consumes the code snippets (named as column `text`) and the respective label (named as column `label`).
