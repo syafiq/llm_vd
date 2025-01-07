@@ -1,14 +1,11 @@
 ## Description
 This repository contains the code, data, and models used in our study on the effectiveness of Language Models (LMs) for vulnerability detection across multiple programming languages. We focus on JavaScript, Java, Python, PHP, Go, and C/C++, leveraging the CVEfixes dataset to create language-specific subsets. We fine-tune and evaluate state-of-the-art LMs on these subsets to assess their performance in detecting vulnerabilities across different languages.
 
-- We clean and adapt the large CVEFixes dataset to perform an empirical study on the vulnerability detection performance differences between JavaScript, Java, Python, PHP, Go, and C/C++.
-- We analyze and present correlation figures for the relationship between code complexity and vulnerability detection performance in the investigated dataset.
-
 ## Downloading the Dataset and Models
 
-Due to size constraints, the dataset and models are provided separately.
+Due to size constraints, the datasets and models are provided separately.
 
-Datasets: Download the dataset from [Google Drive](https://drive.google.com/drive/folders/1gef7O2592a5BEdjX_yPz78HTN7-p_Zmo?usp=sharing). 
+Datasets: Download the datasets from [Google Drive](https://drive.google.com/drive/folders/1gef7O2592a5BEdjX_yPz78HTN7-p_Zmo?usp=sharing). 
 
 Models: Download the finetuned models from [Google Drive](https://drive.google.com/drive/folders/1RhyW2CkIvLzsDmIfdmBmYNFhxNQansOv?usp=sharing). 
 
@@ -53,7 +50,7 @@ sbatch performance/finetuning/finetune.sh
 ```
 
 ### Measurement on Other Datasets
-To replicate the measurement on MegaVul, synth-vuln-fixes, and SARD use the following script:
+To replicate the measurement on MegaVul, synth-vuln-fixes, and SARD, use the following script:
 
 ```bash
 python performance/test_on_other/other.py
