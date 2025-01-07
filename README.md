@@ -84,8 +84,5 @@ Contributions are welcome! Please open an issue or submit a pull request.
 ## License
 This project is licensed under the Apache-2.0 license.
 
-## Acknowledgments
-We would like to thank the contributors to the CVEfixes dataset and the developers of the DeepSeek-Coder models.
-
 ## Contact
 For any inquiries, please open an issue in this repository.
