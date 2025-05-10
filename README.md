@@ -74,7 +74,7 @@ Our findings indicate significant variations in detection performance across dif
 
 JavaScript demonstrated higher vulnerability detection performance, achieving better F1 scores.
 C/C++ showed lower performance, with significantly lower F1 scores.
-We did not find a strong correlation between code complexity and the detection capabilities of LMs. The correlation coefficients were weak and not statistically significant, suggesting that code complexity, as measured by metrics like Cyclomatic Complexity and Halstead Effort, may not be a determining factor in the effectiveness of LM-based vulnerability detection.
+We did not find a strong correlation between code complexity and LMs' detection capabilities. The correlation coefficients were weak and not statistically significant, suggesting that code complexity, as measured by metrics like Cyclomatic Complexity and Halstead Effort, may not be a determining factor in the effectiveness of LM-based vulnerability detection.
 
 For detailed results and analysis, please refer to our paper.
 
